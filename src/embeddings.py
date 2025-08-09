@@ -7,6 +7,7 @@ import os
 from dotenv import load_dotenv
 from config.settings import EMBEDDING_MODEL
 from src.reasoning import generate_comprehensive_fit_reasoning
+from src.utils import get_env_var
 
 try:
     from nltk.corpus import stopwords as nltk_stopwords  # type: ignore
@@ -30,7 +31,7 @@ load_dotenv()
 class JobResumeEmbedder:
     def __init__(self):
         """Initialize the embedding model and optionally login to Hugging Face Hub."""
-        hf_token = os.getenv("HFReadToken")
+        hf_token = get_env_var("HFReadToken")
         if hf_token:
             try:
                 login(token=hf_token)

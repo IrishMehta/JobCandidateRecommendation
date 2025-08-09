@@ -2,10 +2,11 @@ import os
 import time
 from typing import Optional
 from groq import Groq, APIError
+from src.utils import get_env_var
 
 try:
     if Groq:
-        client = Groq(api_key=os.environ.get("GroqAPI"))
+        client = Groq(api_key=get_env_var("GroqAPI"))
     else:
         client = None
 except Exception as e:

@@ -3,9 +3,10 @@ from dotenv import load_dotenv
 from llama_parse import LlamaParse
 import asyncio
 from collections import Counter
+from .utils import get_env_var
 
 def _debug_enabled() -> bool:
-    return os.getenv("RESUME_PARSER_DEBUG", "0").lower() in ("1", "true", "yes", "on")
+    return get_env_var("RESUME_PARSER_DEBUG", "0").lower() in ("1", "true", "yes", "on")
 
 def _dbg(message: str) -> None:
     if _debug_enabled():
@@ -57,10 +58,10 @@ def extract_name_from_resume(resume_text: str) -> str:
 def setup_llamaparse():
     """Load API key and initialize LlamaParse with proper configuration."""
     load_dotenv()
-    api_key = os.getenv('LLAMAPARSE')
+    api_key = get_env_var('LLAMAPARSE')
     
     if not api_key:
-        raise ValueError("LLAMAPARSE API key not found in .env file")
+        raise ValueError("LLAMAPARSE API key not found in environment variables or Streamlit secrets")
     
     # Initialize with minimal, stable configuration
     parser = LlamaParse(
@@ -111,7 +112,7 @@ def test_api_connection():
     """Test if API key and connection work."""
     try:
         load_dotenv()
-        api_key = os.getenv('LLAMAPARSE')
+        api_key = get_env_var('LLAMAPARSE')
         
         if not api_key:
             return False, "No API key found"
