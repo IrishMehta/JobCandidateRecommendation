@@ -314,4 +314,4 @@ if find_clicked:
             with feedback_container:
                 render_candidate_feedback(job_description, filtered, embedder)
 
-st.caption("Built with JobBERT-v2 embeddings and BART reasoning.") 
+st.caption("Built with JobBERT-v2 embeddings and GPT OSS 20B reasoning.") 
