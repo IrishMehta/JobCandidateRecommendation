@@ -37,9 +37,9 @@ streamlit run app.py
 3) Adjust similarity threshold and top‑K
 4) Click "Find Top Candidates"
 
-### Project structure (compact)
+### Project structure
 ```
-CandidateRecommendation/
+JobCandidateRecommendation/
 ├── app.py                   # Streamlit UI
 ├── src/
 │   ├── embeddings.py        # JobBERT‑v2 embeddings + ranking
@@ -53,10 +53,10 @@ CandidateRecommendation/
 ├── config/
 │   └── settings.py          # Defaults (model names, UI labels)
 ├── data/
-│   ├── sample_resumes/
-│   ├── temp_uploads/
-│   └── embeddings_cache/
-└── tests/                   # Basic embedding tests and sample data
+    ├── sample_resumes/
+    ├── temp_uploads/
+    └── embeddings_cache/
+
 ```
 
 ### Notes
