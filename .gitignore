@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python packaging
+*.egg-info/
+.dist/
+build/
+
+data/temp_uploads/
+.data/
+*.npy
+
+# Cache
+.cache/
+.ipynb_checkpoints/
+
+# Streamlit secrets (keep .streamlit/config.toml)
+.streamlit/secrets.toml
+
+# Additional files
+candidate_env/
+.pytest_cache/
+*.log 

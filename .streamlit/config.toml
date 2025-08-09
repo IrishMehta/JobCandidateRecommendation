@@ -1,0 +1,15 @@
+# config.toml
+
+[theme]
+# A modern, robust color palette for better readability
+base = "light"
+primaryColor = "#2f5bea"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f8fafc"
+textColor = "#111111"
+font = "sans serif"
+
+[server]
+headless = true
+port = $PORT
+enableCORS = false
