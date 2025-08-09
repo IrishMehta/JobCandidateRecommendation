@@ -3,13 +3,11 @@
 [theme]
 # A modern, robust color palette for better readability
 base = "light"
-primaryColor = "#2f5bea"
+primaryColor = "#0d6efd"
 backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f8fafc"
-textColor = "#111111"
+secondaryBackgroundColor = "#f7f9fc"
+textColor = "#31333F"
 font = "sans serif"
 
 [server]
-headless = true
-port = $PORT
-enableCORS = false
+runOnSave = true
