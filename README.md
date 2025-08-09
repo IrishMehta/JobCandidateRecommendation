@@ -4,6 +4,15 @@ Streamlit app that ranks resumes against a job description using JobBERT‑v2 em
 
 Deployed at: https://jobcandidaterecommendation-avekk2gfbmczgpvdkuvhwj.streamlit.app/
 
+
+### Approach
+
+**Step 1:** Use LlamaParse to extract clean text from uploaded resume files/content  
+**Step 2:** Generate embeddings for job description and all resumes using JobBERT-v2  
+**Step 3:** Calculate cosine similarity between job and each resume embedding  
+**Step 4:** Filter and rank candidates by similarity threshold and top-K  
+**Step 5:** Generate concise reasoning for each top candidate using Groq's API for different LLMs
+
 ### Setup
 1) Python 3.11 recommended
 2) Install dependencies:
