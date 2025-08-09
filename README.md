@@ -2,23 +2,7 @@
 
 Streamlit app that ranks resumes against a job description using JobBERT‑v2 embeddings and Groq LLM reasoning.
 
-### Features
-- Upload multiple resumes (PDF/TXT/DOCX) or paste resume texts
-- Parse resumes to text via LlamaParse (markdown output)
-- Generate embeddings with `TechWolf/JobBERT-v2` and rank by cosine similarity
-- Filter by similarity threshold and top‑K
-- Per‑candidate, concise explanation via Groq chat completions
-- Optional name extraction from resume headers (spaCy)
-
-### Tech stack
-- Streamlit
-- sentence-transformers (JobBERT‑v2)
-- scikit‑learn (cosine similarity)
-- Groq (chat completions; model: `openai/gpt-oss-20b`)
-- llama-parse
-- pandas, numpy
-- python‑dotenv
-- spaCy (optional `en_core_web_sm`)
+Deployed at: https://jobcandidaterecommendation-avekk2gfbmczgpvdkuvhwj.streamlit.app/
 
 ### Setup
 1) Python 3.11 recommended
@@ -70,6 +54,24 @@ CandidateRecommendation/
 - Environment variables: `LLAMAPARSE`, `GroqAPI`, `HFReadToken`
 - Defaults (threshold/top‑K, allowed file types) live in `config/settings.py` 
 
+
+### Features
+- Upload multiple resumes (PDF/TXT/DOCX) or paste resume texts
+- Parse resumes to text via LlamaParse (markdown output)
+- Generate embeddings with `TechWolf/JobBERT-v2` and rank by cosine similarity
+- Filter by similarity threshold and top‑K
+- Per‑candidate, concise explanation via Groq chat completions
+- Optional name extraction from resume headers (spaCy)
+
+### Tech stack
+- Streamlit
+- sentence-transformers (JobBERT‑v2)
+- scikit‑learn (cosine similarity)
+- Groq (chat completions; model: `openai/gpt-oss-20b`)
+- llama-parse
+- pandas, numpy
+- python‑dotenv
+- spaCy (optional `en_core_web_sm`)
 
 ### Decision Justifications
 
